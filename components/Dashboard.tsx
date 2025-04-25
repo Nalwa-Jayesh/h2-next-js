@@ -31,26 +31,7 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Bottom section */}
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        gap: 20,
-        width: '100%',
-        maxWidth: 1128,
-        marginBottom: 40,
-        alignItems: 'flex-end',
-        height: 650
-      }}>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
-          {/* Empty space to align with the layout */}
-        </div>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '100%' }}>
-          <FinancialWellbeingCard />
-        </div>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '100%' }}>
-          <ProspectLeadsCard />
-        </div>
-      </div>
+
     </div>
   );
 };
