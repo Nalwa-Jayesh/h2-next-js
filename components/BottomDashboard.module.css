@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  max-width: 1128px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.leftColumn {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.rightColumn {
+  flex: 1;
+  order: 1;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .leftColumn, 
+  .rightColumn {
+    width: 100%;
+  }
+  
+  .rightColumn {
+    margin-top: 16px;
+  }
+} 
