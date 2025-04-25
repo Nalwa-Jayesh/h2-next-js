@@ -8,7 +8,7 @@ const questions = [
     user: {
       name: "Phoenix Baker",
       username: "@phoenix",
-      avatar: "/images/avatars/phoenix.png"
+      avatar: "/images/avatars/phoenix-live.png"
     },
     question: "What are the requirements for opening a new store?",
     time: "5min ago",
@@ -19,7 +19,7 @@ const questions = [
     user: {
       name: "Koray Okumus",
       username: "@koray",
-      avatar: "/images/avatars/koray.png"
+      avatar: "/images/avatars/koray-live.png"
     },
     question: "How do I manage inventory effectively?",
     time: "4hr ago",

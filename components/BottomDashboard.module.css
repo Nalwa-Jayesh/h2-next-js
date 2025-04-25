@@ -1,24 +1,39 @@
 .container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 0px;
   width: 100%;
-  max-width: 1128px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  max-width: 1192px;
+  height: 291px;
+  background: #F9FAFB;
+  border-top: 1px solid #D7DFE9;
+  align-items: stretch;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .leftColumn {
+  width: 360px;
+  min-width: 360px;
+  max-width: 360px;
+  height: 100%;
   flex: none;
   order: 0;
-  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px; /* No gap between Pending Questions and sidebar */
 }
 
 .rightColumn {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
   order: 1;
-  flex-grow: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {

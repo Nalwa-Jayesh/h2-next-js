@@ -2,13 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+  justify-content: flex-start;
+  gap: 16px; /* More compact vertical spacing */
+  padding: 24px;
   width: 360px;
+  box-sizing: border-box;
+  height: 100%;
   background: #FFFFFF;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1);
-  border: 1px solid #EAECF0;
-  overflow: hidden;
+  border: none;
+  border-radius: 0px;
+  overflow: visible;
 }
 
 .cardHeader {
@@ -17,8 +20,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 20px;
-  isolation: isolate;
+  gap: 0px;
   width: 100%;
   height: 52px;
   background: #FFFFFF;
@@ -33,8 +35,9 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 12px 24px;
-  gap: 16px;
+  justify-content: space-between;
+  padding: 12px 16px; /* Less horizontal padding */
+  gap: 0px;
   width: 100%;
   height: 52px;
   flex: none;
@@ -55,7 +58,6 @@
   height: 28px;
   flex: none;
   order: 0;
-  align-self: stretch;
   flex-grow: 0;
 }
 
@@ -77,12 +79,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 2px 6px;
   margin: 0;
   width: 28px;
   height: 22px;
   background: #2FBDFF;
-  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 6px;
   flex: none;
   order: 1;
@@ -109,24 +111,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 16px;
-  gap: 16px;
+  padding: 0px 0px 0px 0px;
   width: 100%;
-  height: 119.5px;
   background: #FFFFFF;
   border-bottom: 1px solid #EAECF0;
   flex: none;
   order: 1;
   align-self: stretch;
-  flex-grow: 1;
+  flex-grow: 0;
 }
 
 .avatarAndTime {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0px;
-  gap: 16px;
+  justify-content: space-between;
+  padding: 12px 16px 0px 16px; /* Less horizontal padding */
+  gap: 0px;
   width: 100%;
   height: 40px;
   flex: none;
@@ -143,8 +144,8 @@
   gap: 12px;
   height: 40px;
   flex: none;
-  order: 0;
-  flex-grow: 1;
+  order: 1;
+  flex-grow: 0;
 }
 
 .dot {
@@ -250,9 +251,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px 0px 0px 20px;
+  padding: 0px 0px 16px 0px; /* Remove left padding for flush alignment */
   width: 100%;
-  height: 40px;
+  height: auto;
   flex: none;
   order: 1;
   align-self: stretch;

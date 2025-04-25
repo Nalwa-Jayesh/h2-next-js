@@ -4,6 +4,7 @@ import OnboardingStack from "./OnboardingStack";
 import InsightsStack from "./InsightsStack";
 import FinancialWellbeingCard from "./FinancialWellbeingCard";
 import ProspectLeadsCard from "./ProspectLeadsCard";
+import BottomDashboard from "./BottomDashboard";
 
 const Dashboard: React.FC = () => {
   return (
@@ -31,7 +32,7 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Bottom section */}
-
+      <BottomDashboard />
     </div>
   );
 };
