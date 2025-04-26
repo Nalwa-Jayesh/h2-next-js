@@ -32,6 +32,45 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   max-width: 100vw;
 }
 
+@media (max-width: 768px) {
+  .dashboard-root,
+  .dashboard-main {
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .dashboard-container,
+  .dashboard-main-row {
+    flex-direction: column !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .dashboard-col {
+    width: 100vw !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    margin: 0 0 16px 0 !important;
+    height: auto !important;
+    box-sizing: border-box;
+  }
+  .dashboard-card {
+    width: 100vw !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+  }
+}
+
 
 /* Dashboard Grid Layout */
 .dashboard-grid {
@@ -57,7 +96,16 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 /* Card Styles */
+.dashboard-card-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .dashboard-card {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   box-sizing: border-box;
   background: #fff;
   border: 1px solid #ECECEC;
@@ -67,8 +115,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   margin-bottom: 0;
   width: 100%;
   min-height: 100px;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   transition: box-shadow 0.2s;
@@ -199,47 +245,68 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0px 16px;
-  width: 100%;
-  max-width: 100vw;
+  padding: 0px 32px;
+  width: 1192px;
   height: 80px;
   border-bottom: 1px solid #EAECF0;
+  position: absolute;
+  left: 248px;
+  top: 0px;
+  background: #fff;
 }
+
 @media (max-width: 900px) {
   .header-nav {
-    padding: 0px 8px;
+    width: 100vw;
+    left: 0 !important;
+    padding: 0 8px;
     height: 64px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    max-width: 100vw;
   }
 }
+
+/* removed: handled above for more specificity */
+
+
+
 
 .header-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding: 16px 0px;
-  gap: 2rem;
-  width: 100%;
-  max-width: 100vw;
+  padding: 20px 0px;
+  gap: 738px;
+  width: 1128px;
+  max-width: 1280px;
   height: 80px;
 }
+
 @media (max-width: 900px) {
   .header-container {
-    padding: 8px 0px;
-    gap: 1rem;
+    width: 100vw;
+    max-width: 100vw;
     height: 64px;
+    padding: 8px 0;
+    gap: 0;
+    justify-content: flex-end;
   }
 }
+
+/* removed: handled above for more specificity */
 
 .header-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 12px;
-  width: auto;
+  gap: 16px;
+  width: 96px;
   height: 40px;
-}
+} 
 @media (max-width: 640px) {
   .header-content {
     gap: 8px;
@@ -255,7 +322,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   gap: 4px;
   width: 40px;
   height: 36px;
-}
+} 
 .header-gear-btn {
   display: flex;
   flex-direction: row;
@@ -268,10 +335,198 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   border-radius: 6px;
   border: none;
   box-shadow: none;
-}
+} 
 .header-avatar {
-  border: 0.75px solid rgba(0, 0, 0, 0.08);
+  width: 40px;
+  height: 40px;
+  background: #fff;
   border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 0.75px solid rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-main-content {
+  margin-top: 80px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-main-content {
+    margin-top: 64px;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .dashboard-main-content {
+    margin-top: 64px;
+  }
+}
+
+.dashboard-main-wrapper {
+  margin-left: 248px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-main-wrapper {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100vw !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Global Styles */
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+  color: #000;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+
+.bottom-dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .bottom-dashboard {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+
+.dashboard-main-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 32px;
+  align-items: stretch;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .dashboard-main-row {
+    width: 100vw;
+    max-width: 100vw;
+    padding-left: 8px;
+    padding-right: 8px;
+    gap: 16px;
+    margin-bottom: 16px;
+    overflow-x: hidden;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .dashboard-main-row {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-main-row {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dashboard-main-row {
+    margin-left: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-main-row {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+  }
+}
+
+.dashboard-main-row > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.dashboard-card {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 /* Sidebar styles fixed */

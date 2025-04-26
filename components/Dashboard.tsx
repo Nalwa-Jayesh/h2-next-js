@@ -1,36 +1,36 @@
 import React from "react";
 import AccountProgressCard from "./AccountProgressCard";
-import OnboardingStack from "./OnboardingStack";
-import InsightsStack from "./InsightsStack";
+import OnboardingCard from "./OnboardingCard";
+import InsightsCard from "./InsightsCard";
 import FinancialWellbeingCard from "./FinancialWellbeingCard";
 import ProspectLeadsCard from "./ProspectLeadsCard";
 import BottomDashboard from "./BottomDashboard";
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="dashboard-container" style={{ padding: '40px 32px' }}>
+    <div className="dashboard-container w-full px-2 sm:px-4 py-8 flex flex-col gap-8 bg-white text-black min-h-screen">
       {/* Top section */}
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        gap: 20,
-        width: '100%',
-        maxWidth: 1128,
-        marginBottom: 20,
-        alignItems: 'stretch',
-        height: 650
-      }}>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
-          <AccountProgressCard />
+      <div className="dashboard-main-row grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-5 items-stretch">
+        {/* Left Column: Account Progress */}
+        <div className="w-full h-full"><AccountProgressCard /></div>
+        {/* Middle Column: Onboarding + Financial Wellbeing stacked, constrained height */}
+        <div className="w-full h-full flex flex-col" style={{height: '100%'}}>
+          <OnboardingCard />
+          <div style={{paddingTop: '16px'}}>
+            <FinancialWellbeingCard />
+          </div>
         </div>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
-          <OnboardingStack />
+        {/* Right Column: Insights + Prospect Leads stacked with padding */}
+        <div className="w-full h-full flex flex-col" style={{height: '100%'}}>
+          <InsightsCard />
+          <div style={{paddingTop: '16px'}}>
+            <ProspectLeadsCard />
+          </div>
         </div>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
-          <InsightsStack />
-        </div>
+        {/* Empty cells for grid symmetry */}
+        <div></div>
+        <div></div>
       </div>
-
       {/* Bottom section */}
       <BottomDashboard />
     </div>

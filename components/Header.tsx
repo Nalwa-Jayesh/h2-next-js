@@ -5,6 +5,7 @@ const Header = () => {
     <header className="header-nav">
       <div className="header-container">
         <div className="header-content">
+            
           <div className="header-actions">
             {/* Settings Icon */}
             <button className="header-gear-btn">

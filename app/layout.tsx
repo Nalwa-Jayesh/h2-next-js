@@ -34,9 +34,9 @@ export default function RootLayout({
       <body className={`${inter.variable} ${dmSans.variable} font-sans`}>
         <div className="flex min-h-screen">
           <Sidebar />
-          <div className="flex-1 ml-[248px] bg-white">
+          <div className="flex-1 bg-white dashboard-main-wrapper">
             <Header />
-            <main>{children}</main>
+            <main className="dashboard-main-content">{children}</main>
           </div>
         </div>
       </body>

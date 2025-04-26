@@ -4,12 +4,13 @@
   flex-direction: row;
   gap: 0px;
   width: 100%;
-  max-width: 1192px;
+  max-width: 100vw;
   height: 291px;
   background: #F9FAFB;
   border-top: 1px solid #D7DFE9;
   align-items: stretch;
-  margin: 0 auto;
+  margin: 0;
+  padding-left: 0;
   position: relative;
   overflow: hidden;
 }
@@ -23,7 +24,9 @@
   order: 0;
   display: flex;
   flex-direction: column;
-  margin-left: 0px; /* No gap between Pending Questions and sidebar */
+  margin-left: 0px;
+  background: #fff;
+  border-right: 1px solid #D7DFE9;
 }
 
 .rightColumn {
@@ -34,19 +37,24 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  background: #F9FAFB;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
+    width: 100%;
+    height: auto;
   }
-  
   .leftColumn, 
   .rightColumn {
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
   }
-  
   .rightColumn {
     margin-top: 16px;
+    background: #F9FAFB;
   }
-} 
+}
